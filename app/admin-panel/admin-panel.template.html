@@ -1,0 +1,48 @@
+
+<!-- HEADER START-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="index"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+    </div>
+</nav>
+<!-- HEADER END-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="bhoechie-tab-container sidebar">
+            <div class="col-md-7 bhoechie-tab-menu">
+                <div class="list-group">
+                    <a ui-sref=".adminData" class="active list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-user"></h4><br/>ADMIN
+                    </a>
+                    <a ui-sref=".pickData" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-road"></h4><br/>PICKUP/DELIVERY MANAGEMENT
+                    </a>
+                    <a ui-sref=".pickData" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-road"></h4><br/>CONSUMER MANAGEMENT
+                    </a>
+                    <a ui-sref=".pickData" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-road"></h4><br/>INVENTORY
+                    </a>
+                    <a ui-sref=".pickData" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-road"></h4><br/>WAREHOUSE MANAGEMENT
+                    </a>
+                </div>
+            </div>
+            <div class="col-md- bhoechie-tab">
+                <div class="bhoechie-tab-content active" ui-view="tab"></div>
+            </div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div ui-view="details"></div>
+        </div>
+    </div>
+</div>
