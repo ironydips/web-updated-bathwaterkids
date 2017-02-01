@@ -1,0 +1,29 @@
+
+<!-- PAGE LAYOUT -->
+
+<div ui-view="header"></div>
+
+<div class="container-fluid display-table">
+    <div class="row">
+        <div class="bhoechie-tab-container sidebar display-table-cell vertical_top">
+            <div class="col-lg-6 col-md-3 col-sm-3 bhoechie-tab-menu display-table-cell fl"> 
+               <div ui-view="adminPanel"></div>
+            </div>
+            <div class="bhoechie-tab display-table-cell fl">
+              <div ui-view="adminSubPanel"></div>                    
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div ui-view="contentTabs"></div>
+                <div class="tab-content">
+                    <div id="home" class="tab-pane in active">
+                        <br/>
+                        <div ui-view="contentSection"></div>
+                </div>
+            </div>
+      </div>
+  </div>
+</div>
+
+<!-- PAGE LAYOUT END-->

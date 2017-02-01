@@ -1,0 +1,35 @@
+ <!-- / component3 \ -->
+    <div class="component3">
+        <!-- admin section -->
+        <div class="bhoechie-tab-content active v-align">
+            <center>
+                <ul class="nav menu">
+                    <li ng-class="{'m-active': $root.$state.includes('river')}"><a ui-sref="adminLayout.adminDrivers">Drivers</a></li>
+                    <li ng-class="{'m-active': $root.$state.includes('ruck')}"><a ui-sref="adminLayout.adminTrucks">Trucks</a></li>
+                    <li><a href="admin/timeslots.jsp">Time Slots</a></li>
+                    <li><a href="admin/zipcodes.jsp">Zip Codes</a></li>
+                    <li><a href="admin/promocodes.jsp">Promo Codes</a></li>
+                </ul>
+            </center>
+        </div>
+        <!-- dm section -->
+        <div class="bhoechie-tab-content">
+            <center>
+                <ul class="nav menu">
+                    <li><a href="dm/index.jsp">User Requests</a></li>
+                    <li><a href="dm/trucks.jsp">Trucks</a></li>
+                </ul>
+            </center>
+        </div>
+
+        <!-- um search -->
+        <div class="bhoechie-tab-content">
+            <center>
+                <ul class="nav menu">
+                    <li><a href="um/index.jsp">Users</a></li>
+                    <li><a href="um/userMemberships.jsp">Memberships</a></li>
+                </ul>
+            </center>
+        </div>
+    </div>
+<!-- \ component3 end / -->

@@ -11,7 +11,6 @@ and open the template in the editor.
 table tbody 
 {
     overflow: auto;
-    height: 450px;
 }
 
 th
@@ -452,3 +451,15 @@ table td {
     max-height:100%;
     overflow:auto;
 }
+
+.nav.menu>li a { padding: 18px 0 18px 15px; }
+.nav-pills>li>a { padding: 8px 16px 6px 0px; width: 110px; text-align: center; }
+div.bhoechie-tab-container h4 { margin-bottom: 20px; }
+.tab-content td a { color: #49e679; }
+
+.form-container { height: auto; padding-bottom: 40px; overflow: hidden; }
+
+#menu1 label { color: #4f628d; font-weight: normal; }
+.form-control { border: 1px solid #4f628d; }
+
+input[value="Save"] { background: #6af394; border: 1px solid #6af394; }​

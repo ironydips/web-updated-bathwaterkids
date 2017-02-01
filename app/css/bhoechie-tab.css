@@ -5,7 +5,7 @@ div.bhoechie-tab-container{
   background-color: #ffffff;
   width:auto;
   overflow:hidden;
-  padding: 0 !important;
+  padding:68px 0 0 0;
  /*  border-radius: 4px;
   -moz-border-radius: 4px;
   border:1px solid #ddd;
@@ -31,7 +31,7 @@ div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
-  margin-bottom: 0;
+  margin-bottom: 0; 
 }
 div.bhoechie-tab-menu div.list-group>a .glyphicon,
 div.bhoechie-tab-menu div.list-group>a .fa {
@@ -40,10 +40,16 @@ div.bhoechie-tab-menu div.list-group>a .fa {
 div.bhoechie-tab-menu div.list-group>a:first-child{
   border-top-right-radius: 0;
   -moz-border-top-right-radius: 0;
+  
+   border-top-left-radius: 0;
+  -moz-border-left-right-radius: 0;
 }
 div.bhoechie-tab-menu div.list-group>a:last-child{
   border-bottom-right-radius: 0;
   -moz-border-bottom-right-radius: 0;
+  
+     border-top-left-radius: 0;
+  -moz-border-left-right-radius: 0;0;
 }
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
@@ -142,3 +148,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 .timeslot checkbox{
 	margin-bottom:40px;
 }
+
+.fl{ float:left;}
+.fr{ float: right;}
+.bhoechie-tab{width: 50%;}

@@ -1,6 +1,7 @@
 'use strict';
 
 function AdminPanelController($state) {
+	var ctrl = this;
 }
 
 angular.module('adminPanel')

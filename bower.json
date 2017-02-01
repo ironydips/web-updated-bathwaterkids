@@ -7,10 +7,9 @@
   "private": true,
   "dependencies": {
     "angular": "1.5.x",
-    "angular-mocks": "1.5.x",
-    "angular-resource": "1.5.x",
     "bootstrap": "3.3.x",
     "angular-ui-router": "0.4.x",
-    "angular-google-gapi": "^1.0.1"
+    "angular-google-gapi": "^1.0.1",
+    "angular-messages": "1.5.11"
   }
 }

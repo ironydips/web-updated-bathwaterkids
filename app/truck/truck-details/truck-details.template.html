@@ -1,0 +1,32 @@
+<!-- / component5 \ -->
+<div class="component5">								   
+	<div class="table-responsive">
+		<table class="table table-striped">
+				<thead>
+	            <tr>
+	                <th>Trucks Type</th>
+	                <th>License Plate Number</th>
+	                <th>Dealer</th>
+	                <th>Lease Expiration</th>
+	                <th>Truck Image</th>
+	                <th>Status </th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr ng-repeat="truck in $ctrl.trucks">
+		            <td>{{truck.truckType}}</td>
+	                <td>{{truck.licensePlate}}</td>
+	                <td>{{truck.dealerName}}<br>{{truck.dealerAddress.streetAddress}}, {{truck.dealerAddress.city}}, {{truck.dealerAddress.state}} {{truck.dealerAddress.zipCode}}</td>
+	                <td>{{truck.leaseExpiration}}</td>
+	                <td>
+                        <div class="row" ng-repeat="image in truck.images">
+                            <img src="{{image.url}}" alt="truck image" width="60" height="60">
+                        </div>
+                    </td>
+                    <td id="status">Active</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	</div>				
+</div>
+<!-- \ component5 end / -->

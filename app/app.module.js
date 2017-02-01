@@ -4,13 +4,18 @@
 angular.module('bathwaterApp', [
 	'ui.router',
 	'angular-google-gapi',
+	'ngMessages',
 	'googleSignIn',
+	'naif.base64',
 	'index',
+	'header',
+	'adminLayout',
 	'adminPanel',
-	'adminData',
-	'pickUp',
+	'adminSubPanel',
+	'driversTab',
 	'driverDetails',
 	'addDriver',
-	'driver',
-	'truckDetails'
+	'trucksTab',
+	'truckDetails',
+	'addTruck',
 ]);

@@ -4,7 +4,12 @@ angular.
   module('bathwaterApp').
   config(['$urlRouterProvider' ,'$stateProvider', '$httpProvider',
     function config($urlRouterProvider, $stateProvider, $httpProvider) {
+
+      //HTTP Provider Config
       $httpProvider.defaults.useXDomain = true;
+      // $httpProvider.interceptors.push('InterceptorService');
+
+      // UI-Routing Config
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
@@ -16,54 +21,88 @@ angular.
           url:'/index',
           template: '<index></index>'
         })
-        .state('adminPanel',{
-          url:'/adminPanel',
+        .state('adminLayout',{
+          url:'/admin',
           views:{
             '':{
+              template:'<admin-layout></admin-layout>'
+            },
+            'header@adminLayout':{
+              template:'<header></header>'
+            },
+            'adminPanel@adminLayout':{
               template:'<admin-panel></admin-panel>'
             },
-            'tab@adminPanel':{
-              template:'<admin-data></admin-data>'
+            'adminSubPanel@adminLayout':{
+              template:'<admin-sub-panel></admin-sub-panel>'
             },
-            'details@adminPanel':{
-              template:'<driver></driver>'
+            'contentTabs@adminLayout':{
+              template:'<drivers-tab></drivers-tab>'
             },
-            'driverComponent@adminPanel':{
+            'contentSection@adminLayout':{
               template:'<driver-details></driver-details>'
             }
           }
         })
-        .state('adminPanel.adminData',{
-          url:'/adminData',
-          template:'<admin-data></admin-data>'
+        .state('adminLayout.adminDrivers',{
+          url:'/adminDrivers',
+          views:{
+            'contentTabs@adminLayout':{
+              template:'<drivers-tab></drivers-tab>'
+            },
+            'contentSection@adminLayout':{
+              template:'<driver-details></driver-details>'
+            }
+          }
         })
-        .state('adminPanel.pickData',{
-          url:'/pickupData',
-          template:'<pickup-data></pickup-data>'
-        })
-        .state('adminPanel.drivers',{
+        .state('adminLayout.driverDetails',{
           url:'/drivers',
           views:{
-            'driverComponent@adminPanel':{
+            'contentSection@adminLayout':{
               template:'<driver-details></driver-details>'
             }
           }
         })
-        .state('adminPanel.addDriver',{
+        .state('adminLayout.addDriver',{
           url:'/addDriver',
           views:{
-            'driverComponent@adminPanel':{
+            'contentSection@adminLayout':{
               template:'<add-driver></add-driver>'
             }
           }
         })
-        .state('adminPanel.trucks',{
-          url:'/trucks',
+        .state('adminLayout.adminTrucks',{
+          url:'/adminTrucks',
           views:{
-            'details@adminPanel':{
+            'contentTabs@adminLayout':{
+              template:'<trucks-tab></trucks-tab>'
+            },
+            'contentSection@adminLayout':{
               template:'<truck-details></truck-details>'
             }
           }
-        });
+        })
+        .state('adminLayout.truckDetails',{
+          url:'/trucks',
+          views:{
+            'contentTabs@adminLayout':{
+              template:'<trucks-tab></trucks-tab>'
+            },
+            'contentSection@adminLayout':{
+              template:'<truck-details></truck-details>'
+            }
+          }
+        })
+        .state('adminLayout.addTruck',{
+          url:'/addTruck',
+          views:{
+            'contentTabs@adminLayout':{
+              template:'<trucks-tab></trucks-tab>'
+            },
+            'contentSection@adminLayout':{
+              template:'<add-truck></add-truck>'
+            }
+          }
+        })
     }
   ]);
